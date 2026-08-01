@@ -3,7 +3,7 @@ import { FaHeart, FaEye, FaStar } from 'react-icons/fa';
 
 const Cards = ({ discount, image, name, currentPrice, oldPrice, rating, reviews }) => {
   return (
-    <div className='group relative w-full'>
+    <div className='group relative w-67.5'>
       {/* Product Info */}
       <div className='relative bg-[#F5F5F5] h-[250px] rounded flex items-center justify-center p-4 overflow-hidden'>
         {/* discount badge */}

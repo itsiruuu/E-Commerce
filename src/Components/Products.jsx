@@ -4,13 +4,13 @@ import SecHead from './SecHead'
 import CountDown from './CountDown'
 import Card from './Card'
 import Button from './Button'
+import MusicBanner from '../assets/Categoriesbox.png';
 
 import ReactSlick from 'react-slick'
 const Slider = ReactSlick.default || ReactSlick
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
 
 const SampleNextArrow = (props) => {
   const { onClick } = props
@@ -37,13 +37,13 @@ const SamplePrevArrow = (props) => {
 }
 
 const Products = ({
-  sectionTitle = "Today's",
-  heading = "Flash Sales",
+  sectionTitle = "This Month",
+  heading = "Best Selling Products",
   productsData = [],
   showCountdown = false,
   count = {},
-  isSlider = true,
-  buttonText = "View All Products"
+  isSlider = false,
+  buttonText = "View All" 
 }) => {
   const settings = {
     dots: false,
@@ -65,23 +65,31 @@ const Products = ({
   return (
     <div className='mt-35'>
       <Container>
-        {/* <div className='flex gap-21.75 items-end mb-10'>
-          <SecHead title={sectionTitle} heading={heading} />
-          {showCountdown && (
-            <CountDown
-              Days={count.days}
-              Hours={count.hours}
-              Minutes={count.minutes}
-              Seconds={count.seconds}
-            />
+        <div className='flex justify-between items-end mb-10'>
+          <div className='flex gap-21.75 items-end'>
+            <SecHead title={sectionTitle} heading={heading} />
+            {/* {showCountdown && (
+              <CountDown
+                Days={count.days}
+                Hours={count.hours}
+                Minutes={count.minutes}
+                Seconds={count.seconds}
+              />
+            )} */}
+          </div>
+
+          {buttonText && (
+            <Button className='px-12 py-4 text-white bg-[#DB4444] rounded hover:bg-red-600 transition-colors'>
+              {buttonText}
+            </Button>
           )}
-        </div> */}
+        </div>
 
         <div className='mt-10 relative'>
           {isSlider ? (
             <Slider {...settings}>
               {productsData.map((item, index) => (
-                <div key={index} className='px-2'>
+                <div key={index} className='flex justify-between'>
                   <Card
                     image={item.image || item.imgSrc}
                     discount={item.discount}
@@ -95,7 +103,7 @@ const Products = ({
               ))}
             </Slider>
           ) : (
-            <div className='flex justify-between gap-7 mt-15'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-15'>
               {productsData.map((item, index) => (
                 <Card
                   key={index}
@@ -112,13 +120,13 @@ const Products = ({
           )}
         </div>
 
-        {/* {buttonText && (
-          <Button className='mx-auto block mt-10'>{buttonText}</Button>
-        )} */}
         <div className='border-b border-secondary mt-15 mb-20'></div>
       </Container>
     </div>
+
+    
   )
 }
+
 
 export default Products

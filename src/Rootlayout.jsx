@@ -3,7 +3,7 @@ import { Outlet } from 'react-router'
 import Header from './Components/Header'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
-import SecHead from './Components/secHead'
+import SecHead from './Components/SecHead'
 
 
 const Rootlayout = () => {

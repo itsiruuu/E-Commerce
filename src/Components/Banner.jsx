@@ -57,10 +57,10 @@ const Banner = () => {
                             
                     <Slider {...settings} className=''>
                         <div>
-                            <img src={Banner1} alt="" />
+                            <img src={Banner3} alt="" />
                         </div>
                          <div>
-                            <img src={Banner2} alt="" />
+                            <img src={Banner3} alt="" />
                         </div>
                          <div>
                             <img src={Banner3} alt="" />

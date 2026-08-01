@@ -3,10 +3,10 @@ import Products from './Products';
 import { countDownDateAndTime } from 'countdown-date-time';
 
 // Assets
-import Card1 from '../assets/card5.png';
-import Card2 from '../assets/card6.png';
-import Card3 from '../assets/card7.png';
-import Card4 from '../assets/card8.png';
+import Card1 from '../assets/Card5.png';
+import Card2 from '../assets/Card6.png';
+import Card3 from '../assets/Card7.png';
+import Card4 from '../assets/Card8.png';
 
 const flashSaleProducts = [
   { image: Card1, discount: "-40%", name: "HAVIT HV-G92 Gamepad", currentPrice: "140", oldPrice: "160", rating: 5, reviews: "88" },

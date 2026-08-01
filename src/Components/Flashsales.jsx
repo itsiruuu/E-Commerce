@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Container from './Container';
-import SecHead from './SecHead';
+import SecHead from './SecHead.jsx';
 import CountDown from './CountDown';
 import Card from './Card';
 import Button from './Button';

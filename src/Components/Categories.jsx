@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from './Container'
-import SecHead from './SecHead'
+import SecHead from './SecHead.jsx'
 import CategorySec from './CategorySec'
 import SlickSlider from "react-slick";
 import "slick-carousel/slick/slick.css";

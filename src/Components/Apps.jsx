@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Products from './Products';
 import { countDownDateAndTime } from 'countdown-date-time';
 
-// Assets
 import Card1 from '../assets/Card5.png';
 import Card2 from '../assets/Card6.png';
 import Card3 from '../assets/Card7.png';
